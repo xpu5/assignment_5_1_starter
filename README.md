@@ -57,7 +57,7 @@
 - No. Numeric columns are just 0/1 value.
 
 - [x] Is there a large skew or excess kurtosis? (This matters for algorithms that assume normal distributions in the data.)
-- No. 
+- `toCoupon_GEQ5min` is always 1 for all rows. The constant value makes this column useless.
 - `age` and `income` have been converted into integer values during the analysis. Their original cardinal numbers are less than 10. The task of visualizing histograms and identifying distribution patterns becomes very challenging due to the low cardinality.
     - [ ] TODO: Confirm `age` is normal distributed, and
     - [ ] TODO: Confirm `income` is **skewed right distribution**.
@@ -91,7 +91,7 @@
 - Performed `chi-square` test for each pair of categorical variables. There are a lot of noises in the output. The key to success is selecting a good `p` threshold value.
 
 ### 6. Additional EDA Tasks completed
-- [x] Fix the column name spelling error in column `passanger`, renamed it `passenger`.
+- [x] Fixed the column name spelling error in column `passanger`, renamed it `passenger`.
 
 
 ## `Coffee House` Coupon Findings
