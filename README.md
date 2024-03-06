@@ -105,7 +105,7 @@ The figure below illustrates the acceptance rate for various bins of `CoffeeHous
 
 ### `occupation`
 
-`occupation` and `expiration` show a relatively strong relationship to  coupon acceptance.
+`occupation` shows a relatively strong relationship to  coupon acceptance.
 - `Student` and `Unemployed` groups have a higher acceptance rate than others in the `occupation` column.
 - One of the common shared attributes between those two groups might be the lower range of their disposable income to spend on coffee.
 - To validate this hypothesis, we could collect some data points like cash/checking account balance in future surveys.
