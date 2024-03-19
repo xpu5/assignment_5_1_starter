@@ -125,8 +125,9 @@ It is clear that a `Coffee House` coupon in the morning (10 AM) is a nice gift p
 
 ![](images/hist_by_time.png)
 
+## Notebook
 
-
+[prompt.ipynb](./prompt.ipynb)
 
 
 
