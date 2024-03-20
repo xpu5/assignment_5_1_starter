@@ -123,13 +123,13 @@ It is clear that a `Coffee House` coupon in the morning (10 AM) is a nice gift p
 
 ![](images/hist_by_time.png)
 
-### Next steps and recommendations
+## Next steps and recommendations
 
 Next steps
 
 - Convert all categorical columns into number columns.
     - Use `One-hot` encoding for categorical columns with no ordering of values, e.g., `destination`, `maritalStatus`
-    - Use `pd.Categorical`to handle categorical columns with meaningful ordering, e.g., `education` instead of writing tedious hardcoded `df.replace` code.
+    - Use `pd.Categorical`to handle categorical columns with meaningful ordering, e.g., `education`, instead of writing tedious hardcoded `df.replace` code.
 - Apply various models to identify the most import columns contributing to the coupon acceptance
     - PCA
     - Linear regression
