@@ -7,6 +7,7 @@
 - Analyzed the `Coffee House` coupon category and discovered that  
     - `CoffeeHouse` (how many times a customer visited a coffee house in the last month) is the major factor contributing to coupon acceptance rate.
     - Other factors like `occupation`, `expiration` show a relatively strong relationship to the coupon acceptance.
+- Notebook source code: [prompt.ipynb](./prompt.ipynb)
 
 ## [EDA Task list](https://docs.google.com/presentation/d/1NcE16zpb0ZA_EO29bKEebgm2ki6z_ne06_dqOdMybos/edit#slide=id.p1)
 
@@ -51,7 +52,7 @@
 
 - [x] Are there strange minimum or maximum values (outliers)?
 - No. Numeric columns are just 0/1 value.
-- For easy query in the later tasks, categorical columns (`Bar`, `CoffeeHouse`, `CarryAway`, `RestaurantLessThan20`, `Restaurant20To50`), `age` and `income` values have been re-mapped into integers with their meaningful rank order unchanged. Choosing a clever mapping with capped value can avoid that outlier problem: for example, `Bar`'s `'gt8'` -> int `9` and `income`'s `'$100000 or More'` -> int `100_001`.
+- For easy query in the later tasks, categorical columns (`Bar`, `CoffeeHouse`, `CarryAway`, `RestaurantLessThan20`, `Restaurant20To50`, `age` and `income`) values have been re-mapped into integers with their meaningful rank order unchanged. Choosing a clever mapping with capped value can avoid that outlier problem: for example, `Bar`'s `'gt8'` -> int `9` and `income`'s `'$100000 or More'` -> int `100_001`.
 
 - [x] Are there strange mean values or large differences between mean and median?
 - No. Numeric columns are just 0/1 value.
@@ -125,9 +126,8 @@ It is clear that a `Coffee House` coupon in the morning (10 AM) is a nice gift p
 
 ![](images/hist_by_time.png)
 
-## Notebook
 
-[prompt.ipynb](./prompt.ipynb)
+
 
 
 
