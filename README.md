@@ -91,20 +91,17 @@
 - [x] Are there any crosstabs that show strong relationships between categorical variables, possibly indicating redundant variables?
 - Performed `chi-square` test for each pair of categorical variables. There are a lot of noises in the output. The key to success is selecting a good `p` threshold value.
 
-### 6. Additional EDA Tasks completed
-- [x] Fixed the column name spelling error in column `passanger`, renamed it `passenger`.
-
 
 ## `Coffee House` Coupon Findings
 
-### `CoffeeHouse`
+### 1. `CoffeeHouse`
 
 `CoffeeHouse` is the major factor contributing to the coupon acceptance rate.
 
 The figure below illustrates the acceptance rate for various bins of `CoffeeHouse`. It is obvious that if a customer goes to a coffee house more often, he/she will be more likely to accept the `Coffee House` coupon. 
 ![](images/CoffeeHouse_acceptance_rate.png)
 
-### `occupation`
+### 2. `occupation`
 
 `occupation` shows a relatively strong relationship to  coupon acceptance.
 - `Student` and `Unemployed` groups have a higher acceptance rate than others in the `occupation` column.
@@ -114,19 +111,34 @@ The figure below illustrates the acceptance rate for various bins of `CoffeeHous
 
 ![](images/hist_by_occupation.png)
 
-### `expiration`
+### 3. `expiration`
 
 Longer `expiration` of coupons (1 day) seems to have a higher acceptance rate. It might be the reason that people don't like the idea of changing their current plan in a rush - go to a coffee shop within 2 hours.
 
 ![](images/hist_by_expiration.png)
 
-### `time`
+### 4. `time`
 
 It is clear that a `Coffee House` coupon in the morning (10 AM) is a nice gift people would like to accept.
 
 ![](images/hist_by_time.png)
 
+### Next steps and recommendations
 
+Next steps
+
+- Convert all categorical columns into number columns.
+    - Use `One-hot` encoding for categorical columns with no ordering of values, e.g., `destination`, `maritalStatus`
+    - Use `pd.Categorical`to handle categorical columns with meaningful ordering, e.g., `education` instead of writing tedious hardcoded `df.replace` code.
+- Apply various models to identify the most import columns contributing to the coupon acceptance
+    - PCA
+    - Linear regression
+    - XGBoost Feature Importance
+- Rerun the analysis on the subset of the original dataset by dropping missing data. Replacing missing data with the most popular values has the effect of reinforcing the importance of feature columns - a winner takes all analogy.
+
+Recommendations:
+
+- Thinking heuristically, it would help to improve the coupon dataset by sampling day of week information. Combining `day of week` and `expiration` together could provide a better understanding between acceptance rate (the custom traffic implied) and the coupon feature design.
 
 
 
